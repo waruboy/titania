@@ -115,6 +115,8 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR,'templates')
 )
 
+CRISPY_TEMPLATE_PACK = 'uni_form'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,7 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
+    # Uncomment the next linte to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
     'crispy_forms',

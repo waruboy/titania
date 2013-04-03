@@ -1,3 +1,10 @@
-html 5
-
-| Titania
+html
+	head
+		link(rel="stylesheet", 
+			href="{{ STATIC_URL }}uni_form/uni-form.css", type="text/css") 
+		link(rel="stylesheet", href="{{ STATIC_URL }}uni_form/default.uni-form.css", type="text/css") 
+	body
+		h1 Formulir Pemesanan
+		| {% load crispy_forms_tags %}
+		| {% crispy example_form example_form.helper %}
+		script(src="{{ STATIC_URL }}uni_form/uni-form.jquery.js", type="text/javascript")
