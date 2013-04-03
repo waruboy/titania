@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'titania.views.home', name='home'),
+    url(r'^$', 'pemesanan.views.home', name='home'),
     # url(r'^titania/', include('titania.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

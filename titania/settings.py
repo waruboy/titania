@@ -90,9 +90,10 @@ SECRET_KEY = 'i1xzbdm_133il(8w!5#m0p!@#@dvrra1wsn#jz^3vlu5l!z%3v'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+     ('pyjade.ext.django.Loader',(
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,9 +112,7 @@ ROOT_URLCONF = 'titania.urls'
 WSGI_APPLICATION = 'titania.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_DIR,'templates')
 )
 
 INSTALLED_APPS = (
